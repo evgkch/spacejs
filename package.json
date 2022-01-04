@@ -1,0 +1,23 @@
+{
+  "name": "spacejs",
+  "version": "0.0.1",
+  "description": "spacejs",
+  "browser": "dist/@spacejs/index.js",
+  "types": "dist/@spacejs/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",    
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/evgkch/spacejs.git"
+  },
+  "devDependencies": {    
+    "typescript": "~4.3.5"
+  },
+  "keywords": [
+    "spacejs"
+  ],
+  "author": "Evgeny Kucherenko <evg.kch@gmail.com>",
+  "license": "ISC"
+}
