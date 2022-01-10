@@ -185,7 +185,7 @@ export class Bounds2 implements IBounds2 {
 
     *[Symbol.iterator](): IterableIterator<IPoint2> {
         yield this.pMin;
-        yield this.pMin;        
+        yield this.pMax;        
     }
 
 }
@@ -329,7 +329,7 @@ export class Bounds3 implements IBounds3 {
 
     *[Symbol.iterator](): IterableIterator<IPoint3> {
         yield this.pMin;
-        yield this.pMin;
+        yield this.pMax;
     }
 
 }

@@ -91,7 +91,7 @@ export class Bounds2 {
     }
     *[Symbol.iterator]() {
         yield this.pMin;
-        yield this.pMin;
+        yield this.pMax;
     }
 }
 export class Bounds3 {
@@ -195,6 +195,6 @@ export class Bounds3 {
     }
     *[Symbol.iterator]() {
         yield this.pMin;
-        yield this.pMin;
+        yield this.pMax;
     }
 }
