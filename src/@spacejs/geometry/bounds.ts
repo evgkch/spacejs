@@ -25,7 +25,6 @@ export interface IBounds2 {
      * a point at the maximum corner has offset (1,1), and so forth.
      */
     offset(a: IPoint2): IVector2
-    overlaps(b: IBounds2): boolean
     expand(t: number): this
 }
 
@@ -87,15 +86,6 @@ export class Bounds2 implements IBounds2 {
             Point2.min(b1.pMin, b2.pMin),
             Point2.max(b1.pMax, b2.pMax)
         );
-    }
-
-    /**
-     * We are able to determine if two bounding boxes overlap by seeing if their extents overlap in all of x and y
-     */
-    static overlaps(b1: IBounds2, b2: IBounds2) {
-        const x = (b1.pMax.x >= b2.pMin.x) && (b1.pMin.x <= b2.pMax.x);
-        const y = (b1.pMax.y >= b2.pMin.y) && (b1.pMin.y <= b2.pMax.y);        
-        return x && y;
     }
 
     /**
@@ -169,10 +159,6 @@ export class Bounds2 implements IBounds2 {
         if (this.pMax.x > this.pMin.x) o.x /= (this.pMax.x - this.pMin.x);
         if (this.pMax.y > this.pMin.y) o.y /= (this.pMax.y - this.pMin.y);
         return o;
-    }
-
-    overlaps(b: IBounds2): boolean {
-        return Bounds2.overlaps(this, b);
     }
 
     expand(t: number): this {        
